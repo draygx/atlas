@@ -421,7 +421,7 @@ function GeneralSettings() {
       </SettingRow>
       <SettingRow
         label="Share usage data"
-        description="Privacy-preserving usage data (app launches, which agents and tools you use, how many files a turn touched, token counts, crashes) to help improve Atlas. Never your prompts, code, file paths, or keys. See TELEMETRY.md."
+        description="Telemetry is disabled in İmece — this toggle has no effect. No usage data leaves your device."
       >
         <Toggle
           checked={settings.shareTelemetry}
