@@ -202,7 +202,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). One thing catches people out:
 - **Secrets are scrubbed before anything is written to disk.** Not before upload, before persistence.
 - **Session capture is local-only by default.** The [Checkpoints](#checkpoints) record is written to `.atlas/sessions.db` and stays there. No account required, and nothing sent anywhere until you explicitly opt in to sync.
 - **Accounts are opt-in.** Sign in to create an organisation and sync across devices and teammates.
-- **Anonymous usage analytics are on by default.** Coarse metadata, never code or prompts. [What's collected, and how to turn it off](TELEMETRY.md).
+- **Anonymous usage analytics are disabled.** İmece removes all telemetry — no data leaves your device.
 
 ## Contributors
 <a href="https://github.com/pacifio/atlas/graphs/contributors">
@@ -218,7 +218,7 @@ MIT. See [LICENSE](LICENSE).
 <div align="center">
 <sub>
 
-[Website](https://www.tryatlas.cc/) · [Docs](https://docs.tryatlas.cc/) · [Discord](https://discord.gg/GmnFggaPfP) · [Telemetry](TELEMETRY.md) · [MIT](LICENSE)
+[Website](https://www.tryatlas.cc/) · [Docs](https://docs.tryatlas.cc/) · [Discord](https://discord.gg/GmnFggaPfP) · [MIT](LICENSE)
 
 </sub>
 </div>
