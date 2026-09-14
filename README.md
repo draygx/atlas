@@ -1,15 +1,11 @@
 <div align="center">
 
-<img src="src/assets/atlas-icon.svg" alt="Atlas" width="88" height="88" />
+# İmece
 
-### Atlas
+**Çok-ajanlı AI oturum takip aracı.**
 
-**Source control for coding agents.**
-
-<br />
-
-<a href="https://trendshift.io/repositories/56020?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-56020" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/56020" alt="pacifio%2Fatlas | Trendshift" width="250" height="55"/></a>
-<a href="https://trendshift.io/repositories/56020?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-56020" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/56020/daily?language=Rust" alt="pacifio%2Fatlas | Trendshift" width="250" height="55"/></a>
+> Atlas fork'u — telemetrisiz, Linux destekli, kişisel kullanım için özelleştirilmiş.
+> **Upstream:** [pacifio/atlas](https://github.com/pacifio/atlas) (MIT)
 
 <br />
 

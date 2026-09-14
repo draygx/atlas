@@ -8,5 +8,5 @@
 static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
 fn main() {
-    atlas_lib::run()
+    imece_lib::run()
 }

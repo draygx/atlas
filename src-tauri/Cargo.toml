@@ -1,10 +1,10 @@
 [package]
-name = "atlas"
+name = "imece"
 version = "0.3.2"
 edition = "2021"
 
 [lib]
-name = "atlas_lib"
+name = "imece_lib"
 # rlib only. `staticlib`/`cdylib` are the Tauri mobile template's crate types
 # (a native shell loads the app as a library); Atlas ships a macOS binary via
 # main.rs → atlas_lib::run(). They are not free: a lib that emits a staticlib

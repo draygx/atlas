@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/crates/tauri-utils/schema.json",
-  "productName": "Atlas",
+  "productName": "İmece",
   "version": "0.3.2",
-  "identifier": "dev.atlas.ide",
+  "identifier": "dev.imece.ide",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:1420",
@@ -13,7 +13,7 @@
     "macOSPrivateApi": true,
     "windows": [
       {
-        "title": "Atlas",
+        "title": "İmece",
         "width": 1280,
         "height": 800,
         "minWidth": 960,
@@ -32,7 +32,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost https://www.gravatar.com; media-src 'self' blob: asset: http://asset.localhost; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost asset: http://asset.localhost blob: data: https://us.i.posthog.com; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'",
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost https://www.gravatar.com; media-src 'self' blob: asset: http://asset.localhost; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost asset: http://asset.localhost blob: data:; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'",
       "dangerousDisableAssetCspModification": ["style-src"],
       "assetProtocol": {
         "enable": true,
@@ -43,7 +43,7 @@
           "deny": []
         }
       },
-      "devCsp": "default-src 'self'; script-src 'self' http://localhost:1420 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost https://www.gravatar.com; media-src 'self' blob: asset: http://asset.localhost; font-src 'self' data:; connect-src 'self' ws://localhost:1420 http://localhost:1420 ipc: http://ipc.localhost asset: http://asset.localhost blob: data: https://us.i.posthog.com; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'"
+      "devCsp": "default-src 'self'; script-src 'self' http://localhost:1420 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost https://www.gravatar.com; media-src 'self' blob: asset: http://asset.localhost; font-src 'self' data:; connect-src 'self' ws://localhost:1420 http://localhost:1420 ipc: http://ipc.localhost asset: http://asset.localhost blob: data:; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'"
     }
   },
   "plugins": {},
@@ -51,18 +51,25 @@
     "active": true,
     "targets": [
       "app",
-      "dmg"
+      "dmg",
+      "appimage",
+      "deb"
     ],
+    "linux": {
+      "deb": {
+        "depends": ["libwebkit2gtk-4.1-0", "libgtk-3-0", "libayatana-appindicator3-1"]
+      }
+    },
     "resources": {
       "resources/nvm.sh": "resources/nvm.sh",
-      "../LICENSE": "licenses/Atlas-LICENSE.txt",
+      "../LICENSE": "licenses/İmece-LICENSE.txt",
       "../vendor/codex/LICENSE": "licenses/OpenAI-Codex-LICENSE.txt",
       "../vendor/codex/NOTICE": "licenses/OpenAI-Codex-NOTICE.txt"
     },
     "category": "DeveloperTool",
-    "shortDescription": "Atlas \u2014 agent-first ideation and planning tool",
-    "longDescription": "Atlas is a Tauri-based desktop app that hosts ACP-compatible coding agents (Claude Code, Codex, OpenCode) with first-class file, knowledge, and research integration.",
-    "copyright": "https://tryatlas.cc/ Report bugs to Github: https://github.com/pacifio/atlas/issues/",
+    "shortDescription": "\u0130mece \u2014 \u00e7ok-ajanl\u0131 AI oturum takip arac\u0131",
+    "longDescription": "\u0130mece, Atlas'\u0131n fork'udur. Telemetrisiz, Linux destekli, ki\u015fisel kullan\u0131m i\u00e7in \u00f6zelle\u015ftirilmi\u015f \u00e7ok-ajanl\u0131 AI coding session takip uygulamas\u0131.",
+    "copyright": "MIT License. Upstream: https://github.com/pacifio/atlas",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
