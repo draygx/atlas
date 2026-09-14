@@ -12,10 +12,9 @@
 import { create } from "zustand";
 import { createSelectors } from "@/lib/create-selectors";
 import { auth, type AuthSnapshot } from "../lib/auth-api";
-import {
-  identify as identifyTelemetry,
-  resetIdentity as resetTelemetryIdentity,
-} from "@/features/telemetry/posthog-client";
+// no-op stubs — telemetry removed in İmece
+const identifyTelemetry = (_snapshot: unknown) => {};
+const resetTelemetryIdentity = () => {};
 
 /**
  * Keep the renderer's crash-reporting identity in step with the account.

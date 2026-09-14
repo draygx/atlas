@@ -1,6 +1,6 @@
 pub mod agent_entitlement;
 pub mod agent_host;
-pub mod agent_analytics;
+pub mod agent_analytics; // no-op stub
 pub mod agent_memory;
 pub mod auth;
 pub mod save_guard;

@@ -6,7 +6,7 @@ import { useWorkspaceStore } from "@/features/workspaces/stores/workspace-store"
 import { useRecentChatsStore } from "@/features/workspaces/stores/recent-chats-store";
 import type { Organisation } from "../types";
 import { slugify } from "../types";
-import { syncOrgTelemetry } from "../lib/org-telemetry";
+const syncOrgTelemetry = (_id: string | null) => {}; // no-op stub
 import { auth, type AccountOrg } from "@/features/auth/lib/auth-api";
 import { useAuthStore } from "@/features/auth/stores/auth-store";
 import { toast } from "sonner";

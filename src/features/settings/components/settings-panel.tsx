@@ -32,7 +32,7 @@ import { KeybindingsSettings } from "./keybindings-settings";
 import { useActionShortcut } from "@/features/keybindings/lib/use-action-shortcut";
 import { useModelPricingStore } from "../stores/model-pricing-store";
 import { useProjectStore } from "@/features/project/stores/project-store";
-import { setEnabled as setTelemetryEnabled } from "@/features/telemetry/posthog-client";
+const setTelemetryEnabled = (_enabled: boolean) => {}; // no-op stub
 import { useFeedbackStore } from "@/features/feedback/stores/feedback-store";
 import { updater } from "@/features/updater/lib/updater-api";
 import { useUpdaterStore } from "@/features/updater/stores/updater-store";
