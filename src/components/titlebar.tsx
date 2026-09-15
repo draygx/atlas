@@ -87,7 +87,7 @@ export function Titlebar() {
       : undefined) ??
     (currentProject ? workspaces.find((w) => w.path === currentProject.path)?.name : undefined) ??
     currentProject?.name ??
-    "Atlas";
+    "İmece";
   const { windowRef, isFullscreen } = useTauriWindow();
   // The titlebar reserves 72px for the OS window controls (traffic lights),
   // EXCEPT when the sidebar is DOCKED (pinned + open): the docked column then

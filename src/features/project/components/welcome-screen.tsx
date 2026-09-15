@@ -26,8 +26,8 @@ export function WelcomeScreen() {
         {/* Branding */}
         <div className="text-center space-y-2">
           <AtlasIcon size={64} className="mx-auto mb-4 rounded-2xl" />
-          <h1 className="text-xl font-semibold text-[var(--text-primary)]">Atlas</h1>
-          <p className="text-sm text-[var(--text-secondary)]">The second brain IDE</p>
+          <h1 className="text-xl font-semibold text-[var(--text-primary)]">İmece</h1>
+          <p className="text-sm text-[var(--text-secondary)]">Çok-ajanlı AI oturum takip</p>
         </div>
 
         {/* Primary action */}

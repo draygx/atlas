@@ -245,7 +245,7 @@ function GeneralSettings() {
     try {
       const next = await invoke<CliStatus>("cli_install_helper");
       setCli(next);
-      toast.success("Installed atlas tools");
+      toast.success("Installed İmece tools");
     } catch (e) {
       toast.error(`Install failed: ${e instanceof Error ? e.message : String(e)}`);
     } finally {
@@ -269,7 +269,7 @@ function GeneralSettings() {
       {configError && (
         <div className="rounded-md border border-amber-500/40 bg-amber-500/10 p-3 space-y-2">
           <p className="text-[12px] font-medium text-text-primary">
-            Atlas is using the last valid settings — config.toml has a problem
+            İmece is using the last valid settings — config.toml has a problem
           </p>
           <p className="text-[11px] text-text-secondary font-mono break-all">{configError}</p>
           <div className="flex gap-2">
@@ -316,11 +316,11 @@ function GeneralSettings() {
       </SettingRow>
       <SectionTitle
         title="Terminal notifications"
-        subtitle="Be told when a command finishes or wants input, wherever you are in Atlas"
+        subtitle="Be told when a command finishes or wants input, wherever you are in İmece"
       />
       <SettingRow
         label="Terminal notifications"
-        description="A command that fails, runs longer than the threshold, or asks for input raises an item in the notification center, a toast when its terminal is off screen, and a macOS notification when Atlas is in the background. Nothing fires while you are looking at that terminal."
+        description="A command that fails, runs longer than the threshold, or asks for input raises an item in the notification center, a toast when its terminal is off screen, and a notification when İmece is in the background. Nothing fires while you are looking at that terminal."
       >
         <Toggle
           checked={settings.terminalNotifications}
@@ -366,7 +366,7 @@ function GeneralSettings() {
       </SettingRow>
       <SettingRow
         label="macOS notifications"
-        description="Also raise a system notification when the Atlas window is not focused."
+        description="Also raise a system notification when the İmece window is not focused."
       >
         <Toggle
           checked={settings.terminalNotifyNative}
@@ -385,7 +385,7 @@ function GeneralSettings() {
       <SectionTitle title="Behaviour" subtitle="Files, logs and the editor" />
       <SettingRow
         label="Auto-add .atlas to .gitignore"
-        description="When you open a git-tracked project, Atlas adds `.atlas/` to the project's .gitignore (creating one if needed). Atlas keeps its caches and state in `.atlas/` — keeping it out of version control is almost always what you want. No-op on non-git projects."
+        description="When you open a git-tracked project, İmece adds `.atlas/` to the project's .gitignore (creating one if needed). İmece keeps its caches and state in `.atlas/` — keeping it out of version control is almost always what you want. No-op on non-git projects."
       >
         <Toggle
           checked={settings.autoAddAtlasGitignore}
@@ -394,7 +394,7 @@ function GeneralSettings() {
       </SettingRow>
       <SettingRow
         label="Show hidden files"
-        description="Show dotfiles and dot-directories (e.g. `.git`, `.atlas`, `.env`) in the file tree. Default ON so nothing is silently hidden. Turn off for a cleaner tree that only lists your project's visible files."
+        description="Show dotfiles and dot-directories (e.g. `.git`, `.atlas`, `.env`) in the file tree. Default ON so nothing is silently hidden. Turn off for a cleaner tree that only shows your project's visible files."
       >
         <Toggle
           checked={settings.showHiddenFiles}
@@ -411,8 +411,8 @@ function GeneralSettings() {
         />
       </SettingRow>
       <SettingRow
-        label="Enable Atlas Logs"
-        description="Record Atlas-internal events (sign-in, agent start/finish, browser/file open, etc.) into the Logs tab under the `atlas` source. Default ON so when something goes wrong you can open the Logs tab, filter by `atlas`, and share a timeline. Turn off if the noise bothers you."
+        label="Enable İmece Logs"
+        description="Record İmece-internal events (sign-in, agent start/finish, browser/file open, etc.) into the Logs tab under the `atlas` source. Default ON so when something goes wrong you can open the Logs tab, filter by `atlas`, and share a timeline. Turn off if the noise bothers you."
       >
         <Toggle
           checked={settings.enableAtlasLogs}
@@ -437,7 +437,7 @@ function GeneralSettings() {
       </SettingRow>
       <SettingRow
         label="Link usage data to my account"
-        description="While signed in, attribute usage data to your Atlas account instead of an anonymous per-device id. Turn this off to stay anonymous even when signed in — already-linked history stays linked."
+        description="While signed in, attribute usage data to your İmece account instead of an anonymous per-device id. Turn this off to stay anonymous even when signed in — already-linked history stays linked."
       >
         <Toggle
           checked={settings.linkTelemetryToAccount}
@@ -470,7 +470,7 @@ function GeneralSettings() {
         />
       </SettingRow>
       <SettingRow
-        label="Atlas CLI"
+        label="İmece CLI"
         description={`Adds an \`atlas\` command to your shell — type \`atlas .\` in any terminal to open the current folder as a project. Refreshed automatically on every launch so an older copy never lingers. ${cliInstalledLine}.`}
       >
         <button
@@ -682,10 +682,10 @@ function UpdatesSettings() {
 
   return (
     <div className="space-y-6">
-      <SectionTitle title="Updates" subtitle="How Atlas keeps itself up to date" />
+      <SectionTitle title="Updates" subtitle="How İmece keeps itself up to date" />
       <SettingRow
         label="Automatic updates"
-        description="Check for a newer version in the background and download it automatically. Updates are Apple-signed and notarized; Atlas verifies the signature before installing. Turn off to never check or download."
+        description="Check for a newer version in the background and download it automatically. İmece verifies the update before installing. Turn off to never check or download."
       >
         <Toggle
           checked={settings.autoUpdate}
@@ -696,7 +696,7 @@ function UpdatesSettings() {
         label={ready ? `Update ready${version ? ` (${version})` : ""}` : "Check for updates"}
         description={
           ready
-            ? "A new version has been downloaded and verified. Restart now, or it'll be applied automatically the next time you quit Atlas."
+            ? "A new version has been downloaded and verified. Restart now, or it'll be applied automatically the next time you quit İmece."
             : "Check now regardless of the automatic-update setting. Newer versions download in the background; you'll be prompted to restart when ready."
         }
       >
@@ -709,18 +709,18 @@ function UpdatesSettings() {
 function AboutSettings() {
   return (
     <div className="space-y-4">
-      <SectionTitle title="About" subtitle="Atlas IDE" />
+      <SectionTitle title="About" subtitle="İmece" />
       <div className="rounded-lg border border-border-default bg-bg-secondary p-4 space-y-2">
         <div className="flex items-center gap-2">
           <AtlasIcon size={40} className="rounded-xl" />
           <div>
-            <p className="text-sm font-semibold text-text-primary">Atlas</p>
-            <p className="text-[10px] text-text-tertiary">v0.3.2 — The second brain IDE</p>
+            <p className="text-sm font-semibold text-text-primary">İmece</p>
+            <p className="text-[10px] text-text-tertiary">v0.3.2 — Çok-ajanlı AI oturum takip</p>
           </div>
         </div>
         <p className="text-[11px] text-text-secondary leading-relaxed pt-2">
-          Built with Tauri, React, and Rust. An everything app for agentic development — from code
-          analysis to task management, research, and AI orchestration.
+          Atlas fork — telemetrisiz, Linux destekli, kişisel kullanım için özelleştirilmiş. Built
+          with Tauri, React, and Rust.
         </p>
       </div>
     </div>

@@ -212,7 +212,7 @@ function deliver(d: Decision, ctx: TerminalCtx): void {
   }
   if (d.channels.native) {
     void sendNativeNotification({
-      title: `Atlas: ${ctx.workspaceName ?? "Terminal"}`,
+      title: `İmece: ${ctx.workspaceName ?? "Terminal"}`,
       body: `${d.title} — ${d.body}`,
       sound: d.channels.sound ? "Ping" : undefined,
     });

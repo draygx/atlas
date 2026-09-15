@@ -209,7 +209,7 @@ export function FeedbackPanel() {
               <button
                 type="button"
                 onClick={() => void a.attachScreenshot()}
-                title="Drag a region — or press Space, then click the Atlas window."
+                title="Drag a region — or press Space, then click the İmece window."
                 className="inline-flex h-6 items-center gap-1.5 rounded-md border border-white/[0.06] bg-white/[0.02] px-2 text-[11px] text-text-tertiary hover:bg-white/[0.06] hover:text-text-primary transition-colors cursor-pointer"
               >
                 <Camera size={11} strokeWidth={1.75} />

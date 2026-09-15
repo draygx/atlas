@@ -612,11 +612,11 @@ export function App() {
       const byPath = useWorkspaceStore
         .getState()
         .workspaces.find((w) => w.path === sess?.workingDirectory)?.name;
-      return byPath ?? useProjectStore.getState().currentProject?.name ?? "Atlas";
+      return byPath ?? useProjectStore.getState().currentProject?.name ?? "İmece";
     };
     const notifyAgentDone = (acpSessionId: string) =>
       sendNativeNotification({
-        title: `Atlas: ${sessionProjectName(acpSessionId)}`,
+        title: `İmece: ${sessionProjectName(acpSessionId)}`,
         body: "Agent task finished.",
       });
 
@@ -625,7 +625,7 @@ export function App() {
     // `sendNativeNotification`).
     const notifyPermissionRequested = (toolTitle: string, acpSessionId: string) =>
       sendNativeNotification({
-        title: `Atlas: ${sessionProjectName(acpSessionId)} needs permission`,
+        title: `İmece: ${sessionProjectName(acpSessionId)} needs permission`,
         body: `Approve "${toolTitle}" to continue.`,
       });
 
@@ -1239,11 +1239,10 @@ export function App() {
       .catch((e) => console.warn("recent_files_open_project failed:", e));
   }, [currentProject?.path]);
 
-  // Native window title: `projectName - Atlas` while a project is open,
-  // plain `Atlas` otherwise. This is what macOS shows on the window-menu,
-  // on minimize, and on title hover.
+  // Native window title: `projectName - İmece` while a project is open,
+  // plain `İmece` otherwise.
   useEffect(() => {
-    const title = currentProject ? `${currentProject.name} - Atlas` : "Atlas";
+    const title = currentProject ? `${currentProject.name} - İmece` : "İmece";
     void invoke("set_window_title", { title }).catch(() => {});
   }, [currentProject?.name]);
 
